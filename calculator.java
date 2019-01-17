@@ -11,7 +11,8 @@ import java.util.Scanner;
       	do
         {
         	System.out.print("1. Addition\n");
-           	System.out.print("2. Exit\n\n");
+			System.out.print("2. Subtraction\n");
+           	System.out.print("3. Exit\n\n");
            	System.out.print("Enter Your Choice : ");
            	choice = scan.next().charAt(0);
 
@@ -22,10 +23,16 @@ import java.util.Scanner;
                          	b = scan.nextFloat();
                          	res = a + b;
                          	System.out.print("Result = " + res);
-	                 		break;				
+	                 		break;
 
+				case '2' : 	System.out.print("Enter Two Number : ");
+	                 		a = scan.nextFloat();
+	                 		b = scan.nextFloat();
+	                 		res = a - b;
+	                 		System.out.print("Result = " + res);
+	                 		break;
 
-	      		case '5' : 	System.exit(0);
+	      		case '3' : 	System.exit(0);
 	                		break;
 
 	      		default : 	System.out.print("Wrong Choice!!!");
@@ -34,6 +41,6 @@ import java.util.Scanner;
 
 			System.out.print("\n---------------------------------------\n");
 
-		}while(choice != 2);       
+		}while(choice != 3);       
     }
 }
