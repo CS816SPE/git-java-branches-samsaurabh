@@ -8,39 +8,47 @@ import java.util.Scanner;
 		char choice, ch;
 		Scanner scan = new Scanner(System.in);
 
-      	do
-        {
-        	System.out.print("1. Addition\n");
+		do
+		{
+			System.out.print("1. Addition\n");
 			System.out.print("2. Subtraction\n");
-           	System.out.print("3. Exit\n\n");
-           	System.out.print("Enter Your Choice : ");
-           	choice = scan.next().charAt(0);
+			System.out.print("3. Multiplication\n");
+			System.out.print("4. Exit\n\n");
+			System.out.print("Enter Your Choice : ");
+			choice = scan.next().charAt(0);
 
-           	switch(choice)
-            {
-            	case '1' :	System.out.print("Enter Two Number : ");
-                         	a = scan.nextFloat();
-                         	b = scan.nextFloat();
-                         	res = a + b;
-                         	System.out.print("Result = " + res);
-	                 		break;
+			switch(choice)
+			{
+				case '1' :	System.out.print("Enter Two Number : ");
+							a = scan.nextFloat();
+							b = scan.nextFloat();
+							res = a + b;
+							System.out.print("Result = " + res);
+							break;
 
-				case '2' : 	System.out.print("Enter Two Number : ");
-	                 		a = scan.nextFloat();
-	                 		b = scan.nextFloat();
-	                 		res = a - b;
-	                 		System.out.print("Result = " + res);
-	                 		break;
+				case '2' :	System.out.print("Enter Two Number : ");
+							a = scan.nextFloat();
+							b = scan.nextFloat();
+							res = a - b;
+							System.out.print("Result = " + res);
+							break;
 
-	      		case '3' : 	System.exit(0);
-	                		break;
+				case '3' :	System.out.print("Enter Two Number : ");
+							a = scan.nextFloat();
+							b = scan.nextFloat();
+							res = a * b;
+							System.out.print("Result = " + res);
+							break;
 
-	      		default : 	System.out.print("Wrong Choice!!!");
-	                		break;
-	   		}
+	      		case '4' :	System.exit(0);
+							break;
 
+	      		default  :	System.out.print("Wrong Choice!!!");
+							break;
+			}
+			
 			System.out.print("\n---------------------------------------\n");
 
-		}while(choice != 3);       
-    }
+		}while(choice != 4)
+	}
 }
